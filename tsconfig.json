@@ -7,7 +7,7 @@
     },
     "target": "esnext",
     "lib": ["esnext", "dom"],
-    "moduleResolution": "node", // Add this line
+    "moduleResolution": "node",
     "strict": true,
     "esModuleInterop": true
   },

@@ -1,7 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Dashboard from "./views/Dashboard.vue";
-import Table from "./views/Table.vue";
-import NotFound from "./views/NotFound.vue";
 
 const RouteName = {
   Dashboard: "Dashboard",
@@ -17,17 +14,17 @@ const routes = [
       {
         path: "table",
         name: RouteName.Table,
-        component: Table,
+        component: () => import("@/views/Table.vue"),
       },
       {
         path: "dashboard",
         name: RouteName.Dashboard,
-        component: Dashboard,
+        component: () => import("@/views/Dashboard.vue"),
       },
       {
         path: "404",
         name: RouteName.NotFound,
-        component: NotFound,
+        component: () => import("@/views/NotFound.vue"),
       },
     ],
   },

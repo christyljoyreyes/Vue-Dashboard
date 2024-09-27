@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "target": "esnext",
+    "lib": ["esnext", "dom"],
+    "moduleResolution": "node", // Add this line
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "exclude": ["node_modules", "dist"]
+}

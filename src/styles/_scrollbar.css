@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind utilities;
+
+@layer base {
+  html {
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #2563eb;
+      border-radius: 5px;
+      @apply dark:bg-gray-400;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
+  body::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  body::-webkit-scrollbar-track {
+    @apply bg-gray-50 bg-local md:bg-fixed;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 bg-local md:bg-fixed;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500 bg-local md:bg-fixed;
+  }
+}
+
+@layer utilities {
+  .dark-scrollbars::-webkit-scrollbar-track {
+    @apply bg-slate-800;
+  }
+  .dark-scrollbars::-webkit-scrollbar {
+    @apply w-6 rounded;
+  }
+
+  .dark-scrollbars::-webkit-scrollbar-thumb {
+    @apply bg-slate-600;
+  }
+
+  .dark-scrollbars::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-500;
+  }
+}

@@ -1,0 +1,13 @@
+@tailwind components;
+
+@layer components {
+  div.loader {
+    @apply w-full h-80 flex flex-col items-center justify-center bg-white dark:bg-slate-800;
+  }
+  div.loader-spin {
+    @apply w-12 h-12 rounded-full animate-spin border-8 border-solid border-blue-500 border-t-transparent;
+  }
+  span.loader-span {
+    @apply text-gray-900 dark:text-white font-medium;
+  }
+}

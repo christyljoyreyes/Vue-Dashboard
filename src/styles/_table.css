@@ -1,0 +1,99 @@
+@tailwind base;
+
+@layer base {
+  aside.table-container {
+    @apply my-6 overflow-hidden;
+  }
+  table {
+    @apply w-full text-sm text-left text-gray-500 dark:text-gray-400 table-auto border-collapse;
+  }
+
+  thead {
+    @apply hidden lg:table-header-group text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400;
+  }
+
+  thead tr:first-child {
+    @apply border-l-0 border-r-0;
+  }
+
+  tr {
+    @apply hover:bg-blue-200 bg-white  border-b dark:bg-gray-800 dark:border-gray-700 hover:dark:bg-gray-500/50 border-l-2 border-r-2 hover:border-b-0 hover:border-blue-600 hover:dark:border-gray-800;
+  }
+
+  tr:last-child {
+    @apply border-b-0;
+  }
+
+  td:not(:first-child) {
+    @apply lg:border-l lg:border-t-0 lg:border-r-0 lg:border-b-0 lg:border-gray-100 lg:dark:border-slate-700;
+  }
+
+  th {
+    @apply px-6 py-4 font-medium text-gray-900 whitespace-nowrap  text-white dark:text-white uppercase bg-blue-600 dark:bg-slate-900 font-semibold;
+  }
+
+  th:first-child {
+    @apply rounded-tl-xl;
+  }
+
+  th:last-child {
+    @apply text-center  rounded-tr-xl;
+  }
+
+  tbody {
+    @apply max-lg:border-t-2 max-lg:rounded-tl-xl max-lg:rounded-tr-xl;
+  }
+  td:first-child {
+    @apply font-semibold;
+  }
+
+  td {
+    @apply lg:max-w-xs flex justify-between  text-left px-6 py-4 align-top border-b border-gray-100
+        lg:table-cell lg:text-left lg:p-3 lg:align-middle lg:border-b-0  text-gray-700 border-b dark:text-white capitalize cursor-pointer;
+  }
+
+  td div {
+    @apply flex flex-col items-start;
+  }
+  td div button {
+    @apply text-right w-full pr-2 max-[769px]:pr-0;
+  }
+
+  td:last-child {
+    @apply border-b-0;
+  }
+  td button {
+    @apply ml-2 mr-2  text-green-600 underline;
+  }
+  td span {
+    @apply text-gray-900 dark:text-gray-100;
+  }
+
+  aside input {
+    @apply w-60 p-2 border border-gray-300 rounded-lg shadow-sm focus:border focus:border-blue-400 focus:outline-none mb-4 bg-white dark:text-white dark:bg-slate-900;
+  }
+
+  aside div.table-empty {
+    @apply h-80 w-full flex items-center justify-center bg-gray-100 text-gray-900 text-3xl font-medium dark:text-white dark:bg-slate-800;
+  }
+
+  aside div.table-footer {
+    @apply flex flex-col items-center px-5 py-5 bg-gray-100 border-t dark:bg-slate-800;
+  }
+
+  aside span.table-footer-label {
+    @apply text-xs text-gray-900  dark:text-white;
+  }
+
+  aside div.pagination {
+    @apply inline-flex m-2;
+  }
+
+  aside button.pagination-prev {
+    @apply px-4 py-2 text-sm font-semibold text-gray-800 bg-gray-300 rounded-l hover:bg-gray-400;
+  }
+
+  aside button.pagination-next {
+    @apply px-4 py-2 text-sm font-semibold text-gray-800 bg-gray-300 rounded-r hover:bg-gray-400;
+  }
+}

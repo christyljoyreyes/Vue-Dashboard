@@ -1,0 +1,43 @@
+@tailwind components;
+
+@layer components {
+  div.modal {
+    @apply fixed z-10 overflow-y-auto top-0 w-full left-0 h-screen;
+  }
+  div.modal-overlay {
+    @apply flex items-center justify-center pt-4 px-4 pb-20 text-center sm:block sm:p-0;
+  }
+  div.modal-transparent {
+    @apply fixed inset-0 transition-opacity bg-gray-900 inset-0 opacity-75;
+  }
+  div.modal-dialog {
+    @apply inline-block items-center bg-white rounded-lg text-left overflow-auto shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-3xl sm:w-full;
+  }
+  div.modal-body {
+    @apply bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 overflow-y-auto dark:bg-slate-800;
+  }
+  h2.modal-title {
+    @apply text-xl border-b py-2 dark:text-white capitalize;
+  }
+  p.modal-description {
+    @apply dark:text-gray-200 capitalize;
+  }
+  strong.modal-comment {
+    @apply mt-4 dark:text-white;
+  }
+  li.modal-list {
+    @apply border-b py-2;
+  }
+  div.modal-item {
+    @apply dark:text-gray-200 capitalize;
+  }
+  strong.modal-item-label {
+    @apply dark:text-white;
+  }
+  div.modal-footer {
+    @apply bg-gray-200 px-4 py-3 text-right dark:bg-slate-700;
+  }
+  div.modal-footer button {
+    @apply py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-700 hover:dark:bg-gray-400 mr-2;
+  }
+}

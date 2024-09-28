@@ -27,16 +27,14 @@ import Sidebar from "./components/Sidebar.vue";
 
 const isDarkMode = ref(false);
 const showSideBar = ref(true);
+
 const toggleDarkMode = () => {
   isDarkMode.value = !isDarkMode.value;
-  document.body.classList[isDarkMode.value ? "add" : "remove"](
-    "dark-scrollbars"
-  );
   document.documentElement.classList[isDarkMode.value ? "add" : "remove"](
-    "dark",
-    "dark-scrollbars-compat"
+    "dark"
   );
 };
+
 const toggleSideBar = () => {
   showSideBar.value = !showSideBar.value;
 };

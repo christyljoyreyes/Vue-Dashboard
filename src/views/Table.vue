@@ -1,6 +1,6 @@
 <template>
-  <div class="container mx-auto px-6 py-8 bg-white dark:bg-gray-700 h-auto">
-    <h1 class="text-3xl font-medium text-gray-700 dark:text-white">Table</h1>
+  <div class="post-table">
+    <h1 class="post-table-label">Table</h1>
     <PostTable
       :posts="posts"
       @postSelected="selectPost"

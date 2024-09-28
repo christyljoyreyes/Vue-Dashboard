@@ -2,19 +2,23 @@
 
 @layer components {
   aside.sidebar {
-    @apply w-64 max-[769px]:w-20 shadow-md bg-blue-100 dark:bg-slate-900;
+    @apply w-64 max-[769px]:w-20 shadow-md bg-blue-100;
   }
+
   aside a.sidebar-link {
-    @apply h-20 flex items-center p-6 bg-blue-200 dark:bg-slate-900 overflow-hidden border-b-4 border-blue-600 dark:border-gray-700;
+    @apply h-20 flex items-center p-6 bg-blue-200 overflow-hidden border-b-4 border-blue-600;
   }
+
   aside div.sidebar-link-container {
     @apply flex items-center justify-center;
   }
+
   aside img.sidebar-link-container__img {
     @apply h-8;
   }
+
   aside span.sidebar-link-container__text {
-    @apply hidden md:block self-center text-2xl font-semibold whitespace-nowrap dark:text-white;
+    @apply hidden md:block self-center text-2xl font-semibold whitespace-nowrap;
   }
 
   aside nav.sidebar-nav {
@@ -22,11 +26,15 @@
   }
 
   aside div.sidebar-nav-list {
-    @apply space-y-2 font-medium mt-16 bg-blue-100 dark:bg-slate-900;
+    @apply space-y-2 font-medium mt-16 bg-blue-100;
   }
 
   aside a.sidebar-nav-list-link {
-    @apply flex items-center h-10 px-3 text-gray-900 focus:outline-none  dark:text-white max-[769px]:rounded-lg;
+    @apply flex items-center h-10 px-3 text-gray-900 focus:outline-none max-[769px]:rounded-lg hover:bg-blue-300;
+
+    &.active {
+      @apply bg-blue-600;
+    }
   }
 
   aside svg.sidebar-nav-svg {

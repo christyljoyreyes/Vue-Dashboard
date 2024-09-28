@@ -16,7 +16,9 @@
           :to="route.path"
           v-for="(route, idx) in routerName"
           :key="`router-link-${idx}`"
-          :class="['sidebar-nav-list-link', isActiveRoute(route.path).link]"
+          exact-active-class="active"
+          active-class="active"
+          class="sidebar-nav-list-link"
         >
           <component
             :is="route.svg"
@@ -36,12 +38,14 @@ import TableSvg from "@/components/svg/table.vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
+
 const props = defineProps({
   showSideBar: {
     type: Boolean,
     default: false,
   },
 });
+
 const routerName = [
   {
     name: "Dashboard",
@@ -50,10 +54,10 @@ const routerName = [
   },
   { name: "Table", path: "/table", svg: TableSvg },
 ];
+
 const isActiveRoute = (path: string) => {
   return route.path === path
     ? {
-        link: "bg-blue-600 dark:bg-gray-700",
         icon: "text-white dark:text-white",
         text: "text-white dark:text-gray",
       }

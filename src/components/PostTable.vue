@@ -1,5 +1,5 @@
 <template>
-  <aside class="table-container">
+  <aside class="post-table-container">
     <input v-model="searchQuery" type="text" placeholder="Search..." />
     <table>
       <thead>

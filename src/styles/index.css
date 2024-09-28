@@ -1,9 +1,26 @@
 @import url("_table.css");
-@import url("_dark.css");
-@import url("_light.css");
 @import url("_scrollbar.css");
 @import url("_sidebar.css");
 @import url("_loader.css");
 @import url("_header.css");
 @import url("_modal.css");
 @import url("_dashboard.css");
+@import url("_dark.css");
+
+@layer base {
+  div.error-page {
+    @apply fixed flex flex-col items-center justify-center w-full h-full top-0 left-0 mx-0 px-6 py-8 font-medium bg-slate-900;
+  }
+
+  div.error-page-title {
+    @apply text-6xl text-white uppercase max-md:text-4xl;
+  }
+
+  a.error-page-link {
+    @apply flex m-4 bg-gray-400 p-2 pl-4 pr-4 text-gray-900 rounded-xl hover:bg-gray-800 hover:text-white;
+  }
+
+  button.error-page-btn {
+    @apply w-auto whitespace-nowrap;
+  }
+}

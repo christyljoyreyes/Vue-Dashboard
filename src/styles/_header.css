@@ -2,11 +2,11 @@
 
 @layer components {
   header {
-    @apply h-20 flex items-center justify-between px-6 border-b-4 border-blue-100 dark:border-slate-900 bg-white dark:bg-slate-800;
+    @apply h-20 flex items-center justify-between px-6 border-b-4 border-blue-100 bg-white;
   }
 
   header nav {
-    @apply flex justify-between w-full bg-white dark:bg-slate-800;
+    @apply flex justify-between w-full bg-white;
   }
 
   header nav button.menu {
@@ -14,7 +14,7 @@
   }
 
   header nav button svg {
-    @apply h-6 w-6 dark:text-white;
+    @apply h-6 w-6;
   }
 
   header div.tab {
@@ -30,11 +30,11 @@
   }
 
   header div.avatar img {
-    @apply w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500;
+    @apply w-10 h-10 p-1 rounded-full ring-2 ring-gray-300;
   }
 
   header span.avatar-active {
-    @apply top-0 left-7 absolute w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full;
+    @apply top-0 left-7 absolute w-3.5 h-3.5 bg-green-400 border-2 border-white rounded-full;
   }
 
   header div.info {
@@ -42,10 +42,10 @@
   }
 
   header div.info__name {
-    @apply text-gray-500 dark:text-white;
+    @apply text-gray-500;
   }
 
   header div.info__date {
-    @apply text-sm text-gray-500 dark:text-gray-400;
+    @apply text-sm text-gray-500;
   }
 }
